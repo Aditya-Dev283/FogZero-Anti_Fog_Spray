@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FogZero LAB PROTO • Anti-Fog Chemical Formulation Portal</title>
+  <meta name="description" content="Simple laboratory guide, recipe calculator, and SOP flowchart for FogZero 100 mL Anti-Fog Spray.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       SITE HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#science" class="brand-logo">
+        <div class="brand-icon-box">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+        </div>
+        <div class="brand-text-block">
+          <div class="brand-title-row">
+            <span class="brand-name">FogZero</span>
+          </div>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#science" class="nav-link active">FogZero Science</a></li>
+          <li><a href="#formula" class="nav-link">Formula</a></li>
+          <li><a href="#calculator" class="nav-link">Live Calculator</a></li>
+          <li><a href="#safety" class="nav-link">Safety</a></li>
+          <li><a href="#procedure" class="nav-link">SOP Flowchart</a></li>
+          <li><a href="#gallery" class="nav-link">Lab Videos</a></li>
+          <li><a href="#team" class="nav-link">Our Team</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="printReportBtn" class="btn btn-outline" title="Print lab report or save as PDF">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Print Report</span>
+        </button>
+        <a href="#calculator" class="btn btn-green" title="Jump to Recipe Calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <line x1="8" y1="6" x2="16" y2="6"></line>
+            <line x1="16" y1="14" x2="16" y2="18"></line>
+            <path d="M16 10h.01"></path>
+            <path d="M12 10h.01"></path>
+            <path d="M8 10h.01"></path>
+            <path d="M12 14h.01"></path>
+            <path d="M8 14h.01"></path>
+            <path d="M12 18h.01"></path>
+            <path d="M8 18h.01"></path>
+          </svg>
+          <span>Live Calculator</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO / THE SCIENCE SECTION (EXACT MATCH SCREENSHOT 1)
+       ========================================================================== -->
+  <section id="science" class="hero-section">
+    <div class="container">
+      <div class="tag-pill">
+        <span>🔬 Simple Chemistry • 100 mL Prototype Batch</span>
+      </div>
+
+      <div class="hero-layout">
+        <!-- Left Column: Simple Story & Feature Cards -->
+        <div>
+          <h1 class="hero-headline">
+            The Science of <span style="color: var(--green-main);">"FogZero"</span><br>
+            Anti-Fog Formulation
+          </h1>
+          <p class="hero-desc">
+            <strong>Why does glass fog up?</strong> Warm moisture hits cold glass and beads into thousands of tiny water droplets that scatter light and blur your view.<br><br>
+            <strong>How FogZero works:</strong> A small amount of <strong>Surfactant (Polysorbate 80)</strong> stops water from beading into droplets. Water immediately flattens into an invisible, clear water sheet. Your glass stays 100% transparent!
+          </p>
+
+          <!-- 3 Simple Feature Cards -->
+          <div class="feature-cards-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+              <h4>Surfactant (Polysorbate 80)</h4>
+              <p>Stops water from beading into tiny fog droplets on glass.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💧</div>
+              <h4>Glycerin (1%)</h4>
+              <p>Keeps the coating active, prevents quick drying, and stops streaks.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">✨</div>
+              <h4>100% Clear View</h4>
+              <p>Turns fog into a flat invisible sheet for crystal-clear vision.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Lab Photo Card -->
+        <div class="hero-photo-card">
+          <div class="hero-photo-img-wrapper">
+            <img src="assets/photos/mirror-demo.jpg" alt="FogZero spray on bathroom mirror - clear result">
+          </div>
+          <div class="hero-photo-caption">
+            <h5>FogZero in Action</h5>
+            <p>Spray applied to a bathroom mirror — stays 100% clear after steam.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FORMULA & INGREDIENTS SPECIFICATION
+       ========================================================================== -->
+  <section id="formula" class="section">
+    <div class="container">
+      <div class="section-tag">Standard Laboratory Recipe</div>
+      <h2 class="section-title">Ingredients &amp; What They Do</h2>
+      <p class="section-subtitle">
+        Only 3 simple ingredients are needed to create the 100 mL anti-fog spray.
+      </p>
+
+      <div style="background: #ffffff; border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+        <table style="width: 100%; border-collapse: collapse; text-align: left;">
+          <thead>
+            <tr style="background: var(--bg-card-subtle); border-bottom: 1px solid var(--border-light);">
+              <th style="padding: 0.85rem 1.15rem; font-size: 0.78rem; text-transform: uppercase; color: var(--green-deep);">Ingredient</th>
+              <th style="padding: 0.85rem 1.15rem; font-size: 0.78rem; text-transform: uppercase; color: var(--green-deep);">Amount (100 mL)</th>
+              <th style="padding: 0.85rem 1.15rem; font-size: 0.78rem; text-transform: uppercase; color: var(--green-deep);">Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1.15rem; font-weight: 700; color: var(--green-deep);">Distilled Water</td>
+              <td style="padding: 0.85rem 1.15rem; font-family: var(--font-mono); color: #4b5563;">Fill up to 100 mL (~98.5 mL)</td>
+              <td style="padding: 0.85rem 1.15rem; font-size: 0.82rem; color: #4b5563;">Main liquid base; spreads ingredients evenly on glass.</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-light);">
+              <td style="padding: 0.85rem 1.15rem; font-weight: 700; color: var(--green-deep);">Surfactant (Polysorbate 80)</td>
+              <td style="padding: 0.85rem 1.15rem; font-family: var(--font-mono); color: #4b5563;">0.5 mL</td>
+              <td style="padding: 0.85rem 1.15rem; font-size: 0.82rem; color: #4b5563;">Active surfactant; spreads water into a thin clear film.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.85rem 1.15rem; font-weight: 700; color: var(--green-deep);">Glycerin</td>
+              <td style="padding: 0.85rem 1.15rem; font-family: var(--font-mono); color: #4b5563;">1.0 mL</td>
+              <td style="padding: 0.85rem 1.15rem; font-size: 0.82rem; color: #4b5563;">Humectant; holds moisture so the spray keeps working.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PRODUCT & PURCHASE
+       ========================================================================== -->
+  <section class="section">
+    <div class="container">
+      <div class="buy-layout">
+        <!-- Left: product photo -->
+        <div class="price-photo-col">
+          <div class="price-photo-card">
+            <img src="assets/photos/product-bottle.jpg" alt="FogZero anti-fog spray bottle">
+          </div>
+        </div>
+
+        <!-- Right: price + buy -->
+        <div class="buy-info-col">
+          <div class="buy-tag">🧪 Anti-Fog Spray • 100 mL</div>
+          <h2 class="buy-title">FogZero</h2>
+          <p class="buy-desc">Safe, lab-made anti-fog spray. Works on glasses, mirrors, and helmet visors.</p>
+          <div class="buy-price-row">
+            <span class="buy-price">₹99</span>
+            <span class="buy-per">/ 100 mL bottle</span>
+          </div>
+          <div class="buy-features">
+            <span>✅ 3 natural ingredients</span>
+            <span>✅ Clear, streak-free</span>
+            <span>✅ Lab tested</span>
+          </div>
+          <button class="buy-btn" onclick="alert('Thank you for your interest in FogZero! This is a student lab prototype. Contact our team to order.')">
+            🛒 Buy Now — ₹99
+          </button>
+          <p class="buy-note">Student lab prototype · Limited batches available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculator" class="section">
+    <div class="container">
+      <div class="section-tag">Interactive Laboratory Tool</div>
+      <h2 class="section-title">Batch Volume Scaler &amp; Recipe Calculator</h2>
+      <p class="section-subtitle">
+        Type any batch size or use the buttons to calculate the exact milliliters needed.
+      </p>
+
+      <div class="calculator-box">
+        <!-- Top Row: Input & Presets -->
+        <div class="calc-top-row">
+          <div class="calc-input-block">
+            <label class="calc-input-label" for="batchInput">Desired Batch Size (in mL)</label>
+            <div class="calc-input-group">
+              <input type="number" id="batchInput" class="batch-input" value="100" min="10" max="5000" step="5">
+              <span class="calc-unit">mL</span>
+            </div>
+          </div>
+
+          <div class="calc-input-block">
+            <span class="calc-input-label">Quick Presets</span>
+            <div class="calc-presets-row">
+              <button class="calc-preset-btn" data-batch="50">50 mL</button>
+              <button class="calc-preset-btn active" data-batch="100">100 mL (Default)</button>
+              <button class="calc-preset-btn" data-batch="250">250 mL</button>
+              <button class="calc-preset-btn" data-batch="500">500 mL</button>
+              <button class="calc-preset-btn" data-batch="1000">1000 mL (1L)</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="slider-container">
+          <input type="range" id="batchSlider" class="range-slider" min="20" max="1000" value="100" step="5">
+          <div class="slider-labels">
+            <span>20 mL (Pocket)</span>
+            <span>100 mL (Prototype)</span>
+            <span>500 mL (Dispenser)</span>
+            <span>1000 mL (1 Litre)</span>
+          </div>
+        </div>
+
+        <!-- Calculated Header -->
+        <div class="calc-results-header">
+          <h4>Required Ingredients for Selected Batch</h4>
+          <button id="copyRecipeBtn" class="copy-btn">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy Recipe</span>
+          </button>
+        </div>
+
+        <!-- 3 Cards -->
+        <div class="calc-cards-grid">
+          <!-- Distilled Water -->
+          <div class="white-ing-card">
+            <div>
+              <div class="ing-header">
+                <span class="ing-title">Distilled Water</span>
+                <span class="ing-tag">98.50%</span>
+              </div>
+              <div class="ing-val-row">
+                <span id="valWater" class="ing-num">98.50</span>
+                <span class="ing-unit">mL</span>
+              </div>
+              <div class="ing-progress-bg">
+                <div class="ing-progress-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+            <p class="ing-subtext">Main liquid carrier base</p>
+          </div>
+
+          <!-- Polysorbate 80 -->
+          <div class="white-ing-card">
+            <div>
+              <div class="ing-header">
+                <span class="ing-title">Surfactant (Polysorbate 80)</span>
+                <span class="ing-tag">0.50%</span>
+              </div>
+              <div class="ing-val-row">
+                <span id="valSurfactant" class="ing-num">0.50</span>
+                <span class="ing-unit">mL</span>
+              </div>
+              <div class="ing-progress-bg">
+                <div class="ing-progress-fill" style="width: 25%;"></div>
+              </div>
+            </div>
+            <p class="ing-subtext">Active anti-fog surfactant</p>
+          </div>
+
+          <!-- Glycerin -->
+          <div class="white-ing-card">
+            <div>
+              <div class="ing-header">
+                <span class="ing-title">Glycerin</span>
+                <span class="ing-tag">1.00%</span>
+              </div>
+              <div class="ing-val-row">
+                <span id="valGlycerin" class="ing-num">1.00</span>
+                <span class="ing-unit">mL</span>
+              </div>
+              <div class="ing-progress-bg">
+                <div class="ing-progress-fill" style="width: 35%;"></div>
+              </div>
+            </div>
+            <p class="ing-subtext">Moisture humectant</p>
+          </div>
+        </div>
+
+        <!-- Bottom verification -->
+        <div class="calc-bottom-bar">
+          <span id="sumFormula" class="sum-text">Sum Verification: 98.50 + 0.50 + 1.00 = 100.00 mL</span>
+          <span class="balance-pill">100% Volumetric Balance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SAFETY & CHEMICAL INFO (before procedure)
+       ========================================================================== -->
+  <section id="safety" class="section">
+    <div class="container">
+      <div class="section-tag">Are Our Chemicals Safe?</div>
+      <h2 class="section-title">Safety & Chemical Information</h2>
+      <p class="section-subtitle">
+        All 3 ingredients used in FogZero are well-known, low-risk chemicals used in everyday products.
+      </p>
+
+      <!-- Chemical Safety Cards -->
+      <div class="chem-safety-grid">
+        <div class="chem-card">
+          <div class="chem-card-header">
+            <div class="chem-safe-badge">✅ Safe</div>
+            <h4>Surfactant (Polysorbate 80)</h4>
+          </div>
+          <p>Polysorbate 80 is an approved food additive (E433) used in ice cream, salad dressings, and medicines. It is also widely used in cosmetics and eye drops. At 0.5% concentration in our formula, it is completely non-toxic and non-irritating under normal use. It is not flammable and does not react with skin.</p>
+          <div class="chem-note">Used in: Ice cream, vaccines, eye drops, skincare</div>
+        </div>
+
+        <div class="chem-card">
+          <div class="chem-card-header">
+            <div class="chem-safe-badge">✅ Safe</div>
+            <h4>Glycerin</h4>
+          </div>
+          <p>Glycerin is one of the safest chemicals known — it is naturally produced by the human body and is found in soaps, toothpaste, cough syrups, and food. It is fully water-soluble, non-toxic, and gentle on skin. At 1% in our formula, it acts only as a moisturising agent to keep the spray working longer.</p>
+          <div class="chem-note">Used in: Toothpaste, soap, cough syrup, moisturisers</div>
+        </div>
+
+        <div class="chem-card">
+          <div class="chem-card-header">
+            <div class="chem-safe-badge">✅ Safe</div>
+            <h4>Distilled Water</h4>
+          </div>
+          <p>Distilled water is pure H₂O — all minerals and impurities removed. It is the safest possible solvent. We use it as the base (98.5%) to carry the other ingredients evenly onto glass surfaces. No risk whatsoever.</p>
+          <div class="chem-note">Used in: Drinking water, medical injections, baby products</div>
+        </div>
+      </div>
+
+      <!-- Lab Safety Rules -->
+      <div class="lab-safety-row">
+        <div class="lab-safety-card">
+          <h4><span>👓</span> Surface Compatibility</h4>
+          <p>Tested on ordinary glass. Test on a small area first before using on coated prescription lenses or plastic visors.</p>
+        </div>
+        <div class="lab-safety-card">
+          <h4><span>🥽</span> Lab Handling</h4>
+          <p>Wear safety glasses and gloves in the lab. Avoid contact with eyes. Do not swallow. Do not mix with other cleaners.</p>
+        </div>
+        <div class="lab-safety-card">
+          <h4><span>🧪</span> Fresh Batches Only</h4>
+          <p>No preservatives are used. Prepare small batches and use within a week for best results.</p>
+        </div>
+      </div>
+
+      <!-- Visor Demo Photo -->
+      <div class="visor-demo-wrap">
+        <img src="assets/photos/visor-demo.jpg" alt="FogZero spray applied on motorcycle helmet visor">
+        <div class="visor-demo-caption">
+          <span>✅ Works on helmet visors too — spray, wipe, ride clear.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STANDARD OPERATING PROCEDURE (SOP) & FLOWCHART
+       ========================================================================== -->
+  <section id="procedure" class="section">
+    <div class="container">
+      <div class="section-tag">Standard Operating Procedure (SOP)</div>
+      <h2 class="section-title">Laboratory Protocol &amp; Workflow Flowchart</h2>
+      <p class="section-subtitle">
+        Simple 5-step preparation guide transcribed from our laboratory protocol notebook.
+      </p>
+
+      <div class="protocol-grid">
+        <!-- Left: Lab Notebook Scan -->
+        <div class="notebook-card">
+          <div class="notebook-header">
+            <span class="notebook-header-title">📓 Lab Notebook Flowchart Record</span>
+            <span class="notebook-badge">Original Note</span>
+          </div>
+          <div class="notebook-img-wrap" data-gallery-target data-src="assets/img/lab-notebook-scan.svg" data-title="Original Laboratory Notebook Flowchart" data-desc="Transcribed laboratory notebook records indicating chemical protocol, apparatus, and testing observations.">
+            <img src="assets/img/lab-notebook-scan.svg" alt="Laboratory Protocol Notebook">
+            <div class="notebook-hint">🔍 Click to enlarge original lab flowchart</div>
+          </div>
+          <div class="notebook-caption">
+            <h6>Notebook Note:</h6>
+            <p>"Stir gently with a glass rod so no bubbles or foam form during mixing."</p>
+          </div>
+        </div>
+
+        <!-- Right: 5 Clean Numbered Steps (Zero Overflow Guaranteed) -->
+        <div class="protocol-steps-list">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-card-num">01</div>
+            <div class="step-card-content">
+              <div class="step-card-title-row">
+                <h4>Clean Equipment</h4>
+                <span class="step-pill">Step 1</span>
+              </div>
+              <p>Take a clean 150 mL glass beaker and measuring cylinder. Make sure they are clean and dry.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-card-num">02</div>
+            <div class="step-card-content">
+              <div class="step-card-title-row">
+                <h4>Add 80 mL Water</h4>
+                <span class="step-pill">Step 2</span>
+              </div>
+              <p>Measure and pour approximately <strong>80 mL distilled water</strong> into the beaker.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-card-num">03</div>
+            <div class="step-card-content">
+              <div class="step-card-title-row">
+                <h4>Add 0.5 mL Surfactant (Polysorbate 80)</h4>
+                <span class="step-pill">Step 3</span>
+              </div>
+              <p>Measure <strong>0.5 mL Surfactant (Polysorbate 80)</strong>. Add slowly while stirring gently to prevent foaming.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-card-num">04</div>
+            <div class="step-card-content">
+              <div class="step-card-title-row">
+                <h4>Add 1.0 mL Glycerin</h4>
+                <span class="step-pill">Step 4</span>
+              </div>
+              <p>Add <strong>1.0 mL glycerin</strong> and stir gently for 2–3 minutes until completely mixed.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="step-card">
+            <div class="step-card-num">05</div>
+            <div class="step-card-content">
+              <div class="step-card-title-row">
+                <h4>Fill to 100 mL Mark</h4>
+                <span class="step-pill">Step 5</span>
+              </div>
+              <p>Top up with distilled water to reach the <strong>100 mL line</strong>. Pour into a spray bottle and let stand for 30 minutes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PHOTO & VIDEO GALLERY (WITH 4 STEP VIDEOS WIRED IN)
+       ========================================================================== -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <div class="section-tag">Authentic Laboratory Video &amp; Photo Evidence</div>
+      <h2 class="section-title">Laboratory Practical Videos &amp; Gallery</h2>
+      <p class="section-subtitle">
+        Real video recordings and photographic evidence showing our student team completing each step of the formulation and testing.
+      </p>
+
+      <div class="gallery-grid">
+        <!-- Card 1: Video Step 1 -->
+        <div class="gallery-card">
+          <div class="gallery-thumb" data-gallery-target data-src="assets/img/surfactant-measurement.svg" data-video="assets/videos/step1-polysorbate.mp4" data-title="Step 1 Video: Adding Surfactant (Polysorbate 80)" data-desc="Video showing 0.5 mL Surfactant (Polysorbate 80) measured and added slowly to 80 mL distilled water.">
+            <span class="gallery-badge" style="background: rgba(36, 94, 70, 0.95);">▶ Video: Step 1</span>
+            <div class="gallery-play-icon">▶</div>
+            <img src="assets/img/surfactant-measurement.svg" alt="Adding Surfactant">
+          </div>
+          <div class="gallery-body">
+            <div>
+              <h4>1. Adding Surfactant (Polysorbate 80)</h4>
+              <p>Adding 0.5 mL Surfactant (Polysorbate 80) into 80 mL distilled water while stirring gently.</p>
+            </div>
+            <button class="gallery-link" data-gallery-target data-src="assets/img/surfactant-measurement.svg" data-video="assets/videos/step1-polysorbate.mp4" data-title="Step 1 Video: Adding Surfactant" data-desc="Adding 0.5 mL Surfactant (Polysorbate 80) into 80 mL distilled water.">Play Step 1 Video <span>→</span></button>
+          </div>
+        </div>
+
+        <!-- Card 2: Video Step 2 -->
+        <div class="gallery-card">
+          <div class="gallery-thumb" data-gallery-target data-src="assets/img/homogenization-stirring.svg" data-video="assets/videos/step2-glycerin.mp4" data-title="Step 2 Video: Adding Glycerin" data-desc="Video showing 1.0 mL glycerin added and stirred gently for 2-3 minutes.">
+            <span class="gallery-badge" style="background: rgba(36, 94, 70, 0.95);">▶ Video: Step 2</span>
+            <div class="gallery-play-icon">▶</div>
+            <img src="assets/img/homogenization-stirring.svg" alt="Adding Glycerin">
+          </div>
+          <div class="gallery-body">
+            <div>
+              <h4>2. Adding Glycerin</h4>
+              <p>Adding 1.0 mL glycerin and gently stirring for 2–3 minutes until completely mixed.</p>
+            </div>
+            <button class="gallery-link" data-gallery-target data-src="assets/img/homogenization-stirring.svg" data-video="assets/videos/step2-glycerin.mp4" data-title="Step 2 Video: Adding Glycerin" data-desc="Adding 1.0 mL glycerin and stirring gently.">Play Step 2 Video <span>→</span></button>
+          </div>
+        </div>
+
+        <!-- Card 3: Video Step 3 -->
+        <div class="gallery-card">
+          <div class="gallery-thumb" data-gallery-target data-src="assets/img/final-solution.svg" data-video="assets/videos/step3-volume-makeup.mp4" data-title="Step 3 Video: 100 mL Volume Make-Up" data-desc="Video showing distilled water added until reaching the exact 100 mL graduation mark.">
+            <span class="gallery-badge" style="background: rgba(36, 94, 70, 0.95);">▶ Video: Step 3</span>
+            <div class="gallery-play-icon">▶</div>
+            <img src="assets/img/final-solution.svg" alt="100 mL Volume Make Up">
+          </div>
+          <div class="gallery-body">
+            <div>
+              <h4>3. Fill to 100 mL</h4>
+              <p>Adding distilled water up to the 100 mL line to achieve the calibrated concentration.</p>
+            </div>
+            <button class="gallery-link" data-gallery-target data-src="assets/img/final-solution.svg" data-video="assets/videos/step3-volume-makeup.mp4" data-title="Step 3 Video: 100 mL Make-Up" data-desc="Adding distilled water up to the 100 mL line.">Play Step 3 Video <span>→</span></button>
+          </div>
+        </div>
+
+        <!-- Card 4: Video Step 4 -->
+        <div class="gallery-card">
+          <div class="gallery-thumb" data-gallery-target data-src="assets/img/steam-test-comparison.svg" data-video="assets/videos/step4-spray-demo.mp4" data-title="Step 4 Video: Spray Usage on Glasses" data-desc="Video demonstration showing application of the spray on glasses and exposure to steam.">
+            <span class="gallery-badge" style="background: rgba(36, 94, 70, 0.95);">▶ Video: Step 4</span>
+            <div class="gallery-play-icon">▶</div>
+            <img src="assets/img/steam-test-comparison.svg" alt="Spray Usage on Glasses">
+          </div>
+          <div class="gallery-body">
+            <div>
+              <h4>4. Spray Usage on Glasses</h4>
+              <p>Applying the spray onto glasses and testing over steam to showcase 100% clear anti-fog action.</p>
+            </div>
+            <button class="gallery-link" data-gallery-target data-src="assets/img/steam-test-comparison.svg" data-video="assets/videos/step4-spray-demo.mp4" data-title="Step 4 Video: Spray Usage Demonstration" data-desc="Testing the spray on glasses over steam.">Play Step 4 Video <span>→</span></button>
+          </div>
+        </div>
+
+        <!-- Card 5: Verified Practical Banner -->
+        <div class="verified-card">
+          <div class="verified-icon">🛡️</div>
+          <h3>100% Laboratory Verified Practical</h3>
+          <p>
+            All photographic and video evidence represents real practical experiments conducted by our student team, verified three times under identical humid conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROJECT TEAM
+       ========================================================================== -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-tag">Student Project Team</div>
+      <h2 class="section-title">Our Project Team</h2>
+      <p class="section-subtitle">
+        Student research team responsible for chemical synthesis, practical testing, and documentation.
+      </p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">YS</div>
+          <h4>Yadnesh Sadavarte</h4>
+          <div class="team-role">Roll No: 01 • PRN: 202501100006</div>
+          <p>Chemical Formulation &amp; Surfactant Measurement</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">HB</div>
+          <h4>Harshal Bhange</h4>
+          <div class="team-role">Roll No: 02 • PRN: 202501100007</div>
+          <p>Glycerin Homogenization &amp; Volumetric 100 mL Make-Up</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">AB</div>
+          <h4>Aditya Bhosale</h4>
+          <div class="team-role">Roll No: 03 • PRN: 202501100010</div>
+          <p>Glass Surface Application &amp; Steam Performance Testing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <h4 style="color: var(--green-deep); font-size: 1.05rem; margin-bottom: 0.25rem;">FogZero LAB PROTO</h4>
+      <p style="font-size: 0.8rem; color: var(--green-main); font-weight: 600; margin-bottom: 0.35rem;">
+        Project Team: Yadnesh Sadavarte (Roll 01) • Harshal Bhange (Roll 02) • Aditya Bhosale (Roll 03)
+      </p>
+      <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem;">
+        Anti-Fog Chemical Formulation • Experimental 100 mL Batch
+      </p>
+
+      <ul class="footer-nav">
+        <li><a href="#formula">Formula</a></li>
+        <li><a href="#science">Science</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#gallery">Lab Videos</a></li>
+        <li><a href="#safety">Safety</a></li>
+        <li><a href="#team">Our Team</a></li>
+      </ul>
+
+      <p class="footer-copy">
+        Academic Prototyping Portal • Laboratory Practical Documentation
+      </p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX
+       ========================================================================== -->
+  <div id="galleryModal" class="modal-overlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h4 id="modalTitle">Laboratory Practical Documentation</h4>
+        <button id="modalCloseBtn" class="modal-close">✕</button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="" alt="Enlarged Documentation">
+        <p id="modalDesc" class="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notice -->
+  <div id="toastNotice" class="toast-notice">Recipe copied to clipboard!</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
