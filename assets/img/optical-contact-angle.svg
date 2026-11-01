@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgAngle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1325"/>
+      <stop offset="100%" stop-color="#162238"/>
+    </linearGradient>
+    <linearGradient id="waterDroplet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="8" fill="url(#bgAngle)"/>
+
+  <!-- Left: Hydrophobic Untreated Surface (Contact Angle > 65°) -->
+  <g transform="translate(40, 40)">
+    <rect x="0" y="0" width="245" height="300" rx="8" fill="#111c30" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="122" y="28" font-family="sans-serif" font-size="12" font-weight="900" fill="#ef4444" text-anchor="middle">UNTREATED GLASS (HYDROPHOBIC)</text>
+    
+    <!-- Glass Substrate -->
+    <rect x="20" y="190" width="205" height="15" rx="3" fill="#334155"/>
+    <text x="122" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Glass Substrate (High Surface Tension)</text>
+
+    <!-- Beaded Water Droplet -->
+    <path d="M 60 190 A 62 62 0 1 1 185 190 Z" fill="url(#waterDroplet)" opacity="0.85" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Contact Angle Arc & Tangent -->
+    <line x1="60" y1="190" x2="25" y2="110" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 2"/>
+    <path d="M 90 190 A 30 30 0 0 0 70 162" fill="none" stroke="#f59e0b" stroke-width="2"/>
+    <text x="95" y="172" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">θ ≈ 68°</text>
+
+    <!-- Light Scattering Rays -->
+    <g stroke="#ef4444" stroke-width="2" marker-end="url(#arrow)">
+      <line x1="122" y1="65" x2="122" y2="125"/>
+      <line x1="122" y1="125" x2="70" y2="85" stroke-dasharray="3 2"/>
+      <line x1="122" y1="125" x2="175" y2="90" stroke-dasharray="3 2"/>
+      <line x1="122" y1="125" x2="160" y2="155" stroke-dasharray="3 2"/>
+    </g>
+    <text x="122" y="55" font-family="sans-serif" font-size="10" font-weight="bold" fill="#ef4444" text-anchor="middle">Incident Light Scatters</text>
+    <text x="122" y="260" font-family="sans-serif" font-size="10" fill="#f87171" text-anchor="middle">Result: Opaque Fogging &amp; Distortion</text>
+    <text x="122" y="280" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Millions of lens-like convex micro-beads</text>
+  </g>
+
+  <!-- Right: Hydrophilic Surfactant Film (Contact Angle < 10°) -->
+  <g transform="translate(315, 40)">
+    <rect x="0" y="0" width="245" height="300" rx="8" fill="#111c30" stroke="#10b981" stroke-width="1.5"/>
+    <text x="122" y="28" font-family="sans-serif" font-size="12" font-weight="900" fill="#10b981" text-anchor="middle">POLYSORBATE 80 TREATED</text>
+    
+    <!-- Glass Substrate -->
+    <rect x="20" y="190" width="205" height="15" rx="3" fill="#334155"/>
+    <text x="122" y="225" font-family="sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Treated Glass (Low Surface Tension)</text>
+
+    <!-- Flat Ultra-Thin Water Film -->
+    <rect x="25" y="180" width="195" height="10" rx="2" fill="url(#waterDroplet)" opacity="0.85" stroke="#38bdf8" stroke-width="1.5"/>
+
+    <!-- Contact Angle Arc & Tangent (Flat) -->
+    <line x1="25" y1="180" x2="8" y2="176" stroke="#10b981" stroke-width="2"/>
+    <text x="40" y="165" font-family="sans-serif" font-size="12" font-weight="bold" fill="#10b981">θ &lt; 8°</text>
+
+    <!-- Light Straight Transmission Rays -->
+    <g stroke="#10b981" stroke-width="2">
+      <line x1="75" y1="70" x2="75" y2="215"/>
+      <line x1="122" y1="70" x2="122" y2="215"/>
+      <line x1="170" y1="70" x2="170" y2="215"/>
+    </g>
+    <text x="122" y="55" font-family="sans-serif" font-size="10" font-weight="bold" fill="#10b981" text-anchor="middle">100% Direct Light Transmission</text>
+    <text x="122" y="260" font-family="sans-serif" font-size="10" fill="#34d399" text-anchor="middle">Result: Crystal-Clear Vision</text>
+    <text x="122" y="280" font-family="sans-serif" font-size="9" fill="#94a3b8" text-anchor="middle">Continuous planar hydrophilic sheet</text>
+  </g>
+</svg>
